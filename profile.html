@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -63,20 +63,17 @@
                     </div>
                 </div>
                 <a href="#" id="my_account" class="d-inline-block px"><i class="fa fa-user"></i></a>
-                <a href="#" id="cart_block" class="d-inline-block text-center dropdown">
-	                <div id="cart_heading" class="d-flex" data-hover="dropdown" data-toggle="dropdown">
+                <a href="#" id="cart_block" class="d-inline-block text-center">
+	                <div id="cart_heading" class="d-flex">
 		                <span id="cart_count">0</span>
                         <div id="cart_icon"><img src="assets/img/icons/cart-icon.png"></div> 
 				        <p id="total_price" class="m-0"><span>$0.00</span></p>
 	                </div>
-	                <div class="dropdown-menu" id="cart_content">
-                        <div>Your shopping cart is empty!</div>
-                    </div>
                 </a>
             </div>
         </div>
         <div id="header_bottom" class="row position-relative">
-            <div id="cat_menu" class="col-lg-3 position-relative">
+            <div id="cat_menu" class="col-lg-3 px-md-0 position-relative">
                 <div id="cat_heading">Categories</div>
                 <ul id="cat_list" class="px-0 hide">
                     <li><a href="#">
@@ -111,65 +108,61 @@
                     </a></li>
                 </ul>
             </div>
-            <nav id="navigation" class="col-lg-9">
+            <nav id="navbar" class="col-lg-9 d-flex d-lg-block">
                 <a href="profile.html">My account</a>
-                <a href="#">Wishlist</a>
-                <a href="#">Shopping cart</a>
-                <a href="#">Checkout</a>
-                <a href="#">Contact</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="basket.html">Shopping cart</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
+
+    <main>
+
+    </main>
     
     <footer>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="footer-block">
-                    <img src="image/catalog/grocery/icon-phone.png" alt="Phone">
-                    <h6 style="color: #e16ca4">Call us</h6>
-                    <p>+994 51 574 54 14</p>
+        <div id="footer_top">
+            <div class="row">
+                <div class="footer-block col-md-4">
+                    <div class="img d-inline-block">
+                        <img src="assets/img/icons/icon-phone.png" alt="Phone">
+                    </div>
+                    <div class="d-inline-block">
+                        <h6 style="color: #e16ca4">Call us</h6>
+                        <p>(+994 12) 310 0113</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="footer-block">
-                    <img src="image/catalog/grocery/icon-mail.png" alt="Mail">
-                    <h6 style="color: #c9d420">Contact us</h6>
-                    <p>nasrinfa@code.edu.az</p>
+                <div class="footer-block col-md-4">
+                    <div class="img d-inline-block">
+                        <img src="assets/img/icons/icon-mail.png" alt="Mail">
+                    </div>
+                    <div class="d-inline-block">
+                        <h6 style="color: #c9d420">Contact us</h6>
+                        <p>nasrinfa@code.edu.az</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="footer-block">
-                    <img src="image/catalog/grocery/icon-support.png" alt="Address">
-                    <h6 style="color: #fb9832">Address</h6>
-                    <p>Nizami Street 203B</p>
+                <div class="footer-block col-md-4">
+                    <div class="img d-inline-block">
+                        <img src="assets/img/icons/icon-address.png" alt="Address">
+                    </div>
+                    <div class="d-inline-block">
+                        <h6 style="color: #fb9832">Address</h6>
+                        <p>Nizami Street 203B</p>
+                    </div>
                 </div>
             </div>
        </div>
-       <div class="row">
-            <div class="col-sm-12">text-center">Powered By OpenCart. Your Store © 2015
-                <ul class="social-icons-default">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-               </ul>
-           </div>        
+       <div id="footer_bottom" class="text-center">
+            Created By NasrinEs. Fastor Grocery © 2023
+            <ul class="d-flex justify-content-center">
+                <li><a href="https://github.com/nesrines"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://az.linkedin.com/in/nasrin-asadli-a19a6528a"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://stackoverflow.com/users/23034318/nasrin-asadli"><i class="fa-brands fa-stack-overflow"></i></a></li>
+                <li><a href="https://www.tiktok.com/@nasrin.es"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCiQmeT5tUwmMIvmpbBE6yww"><i class="fa-brands fa-youtube"></i></a></li>
+           </ul>      
        </div>
     </footer>
 
