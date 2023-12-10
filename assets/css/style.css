@@ -298,22 +298,22 @@ footer #footer_bottom ul li a i {
 main {
   padding: 0 20px 35px;
 }
-main #title {
+main #title, main #shop_title {
   padding-top: 40px;
   text-align: center;
 }
-main #title h1 {
+main #title h1, main #shop_title h1 {
   margin: 0 0 5px;
   font-size: 30px;
   font-weight: 700;
 }
-main #title ul {
+main #title ul, main #shop_title ul {
   margin: 0;
 }
-main #title ul li {
+main #title ul li, main #shop_title ul li {
   font-size: 13px;
 }
-main #title ul a {
+main #title ul a, main #shop_title ul a {
   color: #333333;
 }
 main #banners .col-md-8 {
@@ -361,22 +361,29 @@ main #categories .category-row .products {
   border-style: solid none solid none;
 }
 main #categories .category-row .products .product-card {
-  position: relative;
   min-width: calc(100vw - 220px);
-  padding: 50px 20px;
   border-right: 1px solid #e5e5e5;
-  text-align: center;
 }
 main #categories .category-row .products .product-card:last-child {
   border-right: none;
 }
-main #categories .category-row .products .product-card:hover .card-content .name, main #categories .category-row .products .product-card:hover .price {
+main #shop .products {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+main .product-card {
+  position: relative;
+  padding: 50px 20px;
+  text-align: center;
+}
+main .product-card:hover .card-content .name, main .product-card:hover .price {
   display: none;
 }
-main #categories .category-row .products .product-card:hover .only-hover {
+main .product-card:hover .only-hover {
   display: flex;
 }
-main #categories .category-row .products .product-card .card-badge {
+main .product-card .card-badge {
   position: absolute;
   left: 25px;
   top: 30px;
@@ -386,31 +393,31 @@ main #categories .category-row .products .product-card .card-badge {
   font-size: 11px;
   text-transform: uppercase;
 }
-main #categories .category-row .products .product-card .card-badge.new {
+main .product-card .card-badge.new {
   background: linear-gradient(to bottom, #b4c313 0%, #d6df3c 0%, #b4c313 99%);
 }
-main #categories .category-row .products .product-card .card-badge.sale {
+main .product-card .card-badge.sale {
   background: linear-gradient(to bottom, #d44f88 0%, #e989b8 0%, #d44f88 99%);
 }
-main #categories .category-row .products .product-card .card-image a img {
+main .product-card .card-image a img {
   width: auto;
   max-width: 100%;
 }
-main #categories .category-row .products .product-card .card-content .name a {
+main .product-card .card-content .name a {
   padding: 10px 0 0;
   color: #333333;
   font-size: 13px;
 }
-main #categories .category-row .products .product-card .card-content .price {
+main .product-card .card-content .price {
   color: #e16ca4;
   font-size: 14px;
 }
-main #categories .category-row .products .product-card .card-content .price span.old-price {
+main .product-card .card-content .price span.old-price {
   padding-right: 2px;
   color: #232323;
   text-decoration: line-through;
 }
-main #categories .category-row .products .product-card .only-hover {
+main .product-card .only-hover {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
@@ -419,7 +426,7 @@ main #categories .category-row .products .product-card .only-hover {
   padding: 0;
   margin: 0;
 }
-main #categories .category-row .products .product-card .only-hover li a {
+main .product-card .only-hover li a {
   display: block;
   width: 35px;
   height: 35px;
@@ -428,41 +435,41 @@ main #categories .category-row .products .product-card .only-hover li a {
   border-radius: 50%;
   background-color: #ffffff;
 }
-main #categories .category-row .products .product-card .only-hover li a:first-child {
+main .product-card .only-hover li a:first-child {
   margin-right: 5px;
 }
-main #categories .category-row .products .product-card .only-hover li a:hover {
+main .product-card .only-hover li a:hover {
   background-color: #e16ca4;
   border-color: #e16ca4;
 }
-main #categories .category-row .products .product-card .only-hover li a:hover i {
+main .product-card .only-hover li a:hover i {
   color: #ffffff;
 }
-main #contact_form {
+main #form {
   background-color: #ffffff;
   padding: 40px 55px 20px;
   margin: 50px 0 0;
 }
-main #contact_form h3 {
+main #form h3 {
   padding: 10px 0 0;
   margin: 0 0 15px;
   font-size: 20px;
   font-weight: 700;
 }
-main #contact_form .form-group {
+main #form .form-group {
   margin: 0 -15px 15px;
 }
-main #contact_form .form-group label {
+main #form .form-group label {
   padding: 0 15px;
   font-size: 13px;
   white-space: nowrap;
 }
-main #contact_form .form-group label::before {
+main #form .form-group label:not(.nr)::before {
   content: "* ";
   color: #ff0000;
   font-weight: bold;
 }
-main #contact_form .form-group input, main #contact_form .form-group textarea {
+main #form .form-group input, main #form .form-group textarea {
   width: 100%;
   padding: 12px 20px 11px;
   border: 1px solid #e5e5e5;
@@ -471,17 +478,17 @@ main #contact_form .form-group input, main #contact_form .form-group textarea {
   margin: 5px 0;
   color: #808080;
 }
-main #contact_form .form-group input:focus, main #contact_form .form-group textarea:focus {
+main #form .form-group input:focus, main #form .form-group textarea:focus {
   border-color: #e16ca4;
 }
-main #contact_form .form-group input {
+main #form .form-group input {
   height: 45px;
 }
-main #contact_form .buttons {
+main #form .buttons {
   margin: 0 0 15px;
   text-align: end;
 }
-main #contact_form .buttons button {
+main #form .buttons button {
   background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
   color: #ffffff;
   padding: 11px 38px;
@@ -682,6 +689,9 @@ main #contact_form .buttons button {
   main #contact_form label {
     white-space: nowrap;
   }
+  main #shop_title, main #shop {
+    padding-left: 228px;
+  }
   main #banners {
     padding-left: 228px;
   }
@@ -714,6 +724,9 @@ main #contact_form .buttons button {
   }
   main, footer > div {
     width: 1058px;
+  }
+  main #shop_title, main #shop {
+    padding-left: 261px;
   }
   main #banners {
     padding-left: 261px;
@@ -765,6 +778,9 @@ main #contact_form .buttons button {
   }
   main, footer > div {
     width: 1230px;
+  }
+  main #shop_title, main #shop {
+    padding-left: 304px;
   }
   main #banners {
     padding-left: 304px;

@@ -283,7 +283,7 @@ footer {
 
 main {
     padding: 0 20px 35px;
-    #title {
+    #title, #shop_title {
         padding-top: 40px;
         text-align: center;
         h1 {
@@ -340,76 +340,85 @@ main {
             border: 1px solid #e5e5e5;
             border-style: solid none solid none;
             .product-card {
-                position: relative;
                 min-width: calc(100vw - 220px);
-                padding: 50px 20px;
                 border-right: 1px solid #e5e5e5;
-                text-align: center;
                 &:last-child { border-right: none; }
+            }
+        }
+    }
+    #shop .products {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ffffff;
+    }
+
+    .product-card {
+        position: relative;
+        padding: 50px 20px;
+        text-align: center;
+        &:hover {
+            .card-content .name, .price { display: none; }
+            .only-hover { display: flex; }
+        }
+        .card-badge {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 11px;
+            text-transform: uppercase;
+            &.new { background: linear-gradient(to bottom, #b4c313 0%, #d6df3c 0%, #b4c313 99%); }
+            &.sale { background: linear-gradient(to bottom, #d44f88 0%, #e989b8 0%, #d44f88 99%); }
+        }
+        .card-image a img {
+            width: auto;
+            max-width: 100%;
+        }
+        .card-content {
+            .name a {
+                padding: 10px 0 0;
+                color: #333333;
+                font-size: 13px;
+            }
+            .price {
+                color: #e16ca4;
+                font-size: 14px;
+                span.old-price {
+                    padding-right: 2px;
+                    color: #232323;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .only-hover {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: 75px;
+            display: none;
+            padding: 0;
+            margin: 0;
+            li a {
+                display: block;
+                width: 35px;
+                height: 35px;
+                padding: 5px 0;
+                border: 1px solid #cccccc;
+                border-radius: 50%;
+                background-color: #ffffff;
+                &:first-child { margin-right: 5px; }
                 &:hover {
-                    .card-content .name, .price { display: none; }
-                    .only-hover { display: flex; }
-                }
-                .card-badge {
-                    position: absolute;
-                    left: 25px;
-                    top: 30px;
-                    padding: 4px 12px;
-                    border-radius: 4px;
-                    color: #ffffff;
-                    font-size: 11px;
-                    text-transform: uppercase;
-                    &.new { background: linear-gradient(to bottom, #b4c313 0%, #d6df3c 0%, #b4c313 99%); }
-                    &.sale { background: linear-gradient(to bottom, #d44f88 0%, #e989b8 0%, #d44f88 99%); }
-                }
-                .card-image a img {
-                    width: auto;
-                    max-width: 100%;
-                }
-                .card-content {
-                    .name a {
-                        padding: 10px 0 0;
-                        color: #333333;
-                        font-size: 13px;
-                    }
-                    .price {
-                        color: #e16ca4;
-                        font-size: 14px;
-                        span.old-price {
-                            padding-right: 2px;
-                            color: #232323;
-                            text-decoration: line-through;
-                        }
-                    }
-                }
-                .only-hover {
-                    position: absolute;
-                    transform: translateX(-50%);
-                    left: 50%;
-                    bottom: 75px;
-                    display: none;
-                    padding: 0;
-                    margin: 0;
-                    li a {
-                        display: block;
-                        width: 35px;
-                        height: 35px;
-                        padding: 5px 0;
-                        border: 1px solid #cccccc;
-                        border-radius: 50%;
-                        background-color: #ffffff;
-                        &:first-child { margin-right: 5px; }
-                        &:hover {
-                            background-color: #e16ca4;
-                            border-color: #e16ca4;
-                            i { color: #ffffff; }
-                        }
-                    }
+                    background-color: #e16ca4;
+                    border-color: #e16ca4;
+                    i { color: #ffffff; }
                 }
             }
         }
     }
-    #contact_form {
+
+    #form {
         background-color: #ffffff;
         padding: 40px 55px 20px;
         margin: 50px 0 0;
@@ -425,7 +434,7 @@ main {
                 padding: 0 15px;
                 font-size: 13px;
                 white-space: nowrap;
-                &::before {
+                &:not(.nr)::before {
                     content: '* ';
                     color: #ff0000;
                     font-weight: bold;
@@ -641,7 +650,8 @@ main {
     }
     main {
         padding: 0 45px 50px;
-        #contact_form label { white-space: nowrap;}
+        #contact_form label { white-space: nowrap; }
+        #shop_title, #shop { padding-left: 228px; }
         #banners {
             padding-left: 228px;
             .col-md-8 img { width: 403px; }
@@ -670,6 +680,7 @@ main {
     }
     main, footer > div { width: 1058px; }
     main {
+        #shop_title, #shop { padding-left: 261px; }
         #banners {
             padding-left: 261px;
             .col-md-8 img { width: 469px; }
@@ -714,6 +725,7 @@ main {
     }
     main, footer > div { width: 1230px; }
     main {
+        #shop_title, #shop { padding-left: 304px; }
         #banners {
             padding-left: 304px;
             .col-md-8 img { width: 555px; }
