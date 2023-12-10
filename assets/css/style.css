@@ -367,15 +367,30 @@ main #categories .category-row .products .product-card {
 main #categories .category-row .products .product-card:last-child {
   border-right: none;
 }
+main #shop {
+  padding-top: 45px;
+}
 main #shop .products {
   display: flex;
   flex-wrap: wrap;
   background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+main #shop .products .product-card {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+}
+main #shop .products .product-card .card-image img {
+  width: 272px;
 }
 main .product-card {
   position: relative;
   padding: 50px 20px;
   text-align: center;
+}
+main .product-card:hover {
+  outline: 2px solid #e16ca4;
+  border-radius: 4px;
 }
 main .product-card:hover .card-content .name, main .product-card:hover .price {
   display: none;
@@ -505,6 +520,16 @@ main #form .buttons button {
   main #categories .category-row .products .product-card {
     min-width: calc((100vw - 220px) / 2);
   }
+  main #shop .products .product-card {
+    width: calc((100vw - 40px) / 2);
+    border-right: 1px solid #e5e5e5;
+  }
+  main #shop .products .product-card:nth-child(2n) {
+    border-right-style: none;
+  }
+  main #shop .products .product-card:last-child {
+    border-right: none;
+  }
 }
 @media only screen and (min-width: 595px) {
   header #header_bottom #navbar {
@@ -514,6 +539,11 @@ main #form .buttons button {
   main #banners .col-md-8 img {
     width: 555px;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 610px) {
+  main #categories .category-row .products .product-card .card-image a img {
+    width: 155px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -585,6 +615,9 @@ main #form .buttons button {
   footer #footer_top .row .footer-block {
     display: block;
   }
+  main #title, main #shop_title {
+    padding-top: 50px;
+  }
   main #contact_form .form-group {
     display: flex;
   }
@@ -621,6 +654,19 @@ main #form .buttons button {
   main #categories .category-row .products .product-card {
     min-width: 168px;
     padding: 50px 25px;
+  }
+  main #shop .products .product-card {
+    width: 172px;
+    padding: 50px 25px;
+  }
+  main #shop .products .product-card:nth-child(2n) {
+    border-right-style: solid;
+  }
+  main #shop .products .product-card:nth-child(4n) {
+    border-right: none;
+  }
+  main #shop .products .product-card .card-image a img {
+    width: 155px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -690,7 +736,7 @@ main #form .buttons button {
     white-space: nowrap;
   }
   main #shop_title, main #shop {
-    padding-left: 228px;
+    padding-left: 216px;
   }
   main #banners {
     padding-left: 228px;
@@ -706,6 +752,9 @@ main #form .buttons button {
   }
   main #categories .category-row .products .product-card {
     max-width: 163px;
+  }
+  main #shop .products .product-card {
+    width: 155px;
   }
 }
 @media only screen and (min-width: 1098px) {
@@ -742,6 +791,9 @@ main #form .buttons button {
   }
   main #categories .category-row .products .product-card {
     min-width: 196px;
+  }
+  main #shop .products .product-card {
+    width: 155px;
   }
 }
 @media only screen and (min-width: 1200px) {

@@ -297,6 +297,7 @@ main {
             a { color: #333333; }
         }
     }
+
     #banners {
         .col-md-8 {
             padding: 30px 0 0;
@@ -321,6 +322,7 @@ main {
             }
         }
     }
+
     #banners_2 {
         .img-1 img { max-width: 100%; }
         & > div {
@@ -328,6 +330,7 @@ main {
             text-align: center;
         }
     }
+
     #categories .category-row {
         display: flex;
         margin-top: 30px;
@@ -346,10 +349,20 @@ main {
             }
         }
     }
-    #shop .products {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #ffffff;
+
+    #shop {
+        padding-top: 45px;
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            .product-card {
+                width: 100%;
+                border-bottom: 1px solid #e5e5e5;
+                .card-image img { width: 272px; }
+            }
+        }
     }
 
     .product-card {
@@ -357,6 +370,8 @@ main {
         padding: 50px 20px;
         text-align: center;
         &:hover {
+            outline: 2px solid #e16ca4;
+            border-radius: 4px;
             .card-content .name, .price { display: none; }
             .only-hover { display: flex; }
         }
@@ -469,12 +484,25 @@ main {
             }
         }
     }
+
+    #product {
+        
+    }
 }
 
 @media only screen and (min-width: 480px) {
-    main #categories .category-row 
-    .products .product-card
-    { min-width: calc((100vw - 220px) / 2); }
+    main {
+        #categories .category-row .products
+        .product-card {
+            min-width: calc((100vw - 220px) / 2);
+        }
+        #shop .products .product-card { 
+            width: calc((100vw - 40px) / 2);
+            border-right: 1px solid #e5e5e5;
+            &:nth-child(2n) { border-right-style: none; }
+            &:last-child { border-right: none; }
+        }
+    }
 }
 
 @media only screen and (min-width: 595px) {
@@ -488,6 +516,11 @@ main {
             margin: 0 auto;
         }
     }
+}
+
+@media only screen and (min-width: 610px) {
+    main #categories .category-row .products
+    .product-card .card-image a img { width: 155px; }
 }
 
 @media only screen and (min-width: 768px) {
@@ -552,6 +585,7 @@ main {
     }
     footer #footer_top .row .footer-block { display: block; }
     main {
+        #title, #shop_title {padding-top: 50px; }
         #contact_form .form-group {
             display: flex;
             label {
@@ -581,10 +615,16 @@ main {
             padding: 60px 15px 0;
             img { width: 150px; }
         }
-        #categories .category-row .products
-        .product-card {
+        #categories .category-row .products .product-card {
             min-width: 168px;
             padding: 50px 25px;
+        }
+        #shop .products .product-card {
+            &:nth-child(2n) { border-right-style: solid; }
+            &:nth-child(4n) { border-right: none; }
+            width: 172px;
+            padding: 50px 25px;
+            .card-image a img { width: 155px; }
         }
     }
 }
@@ -651,17 +691,16 @@ main {
     main {
         padding: 0 45px 50px;
         #contact_form label { white-space: nowrap; }
-        #shop_title, #shop { padding-left: 228px; }
+        #shop_title, #shop { padding-left: 216px; }
         #banners {
             padding-left: 228px;
             .col-md-8 img { width: 403px; }
             .col-md-4 img { width: 201.5px; }
         }
-        #banners_2 {
-            .img-4 img { width: 187px; }
-        }
+        #banners_2 .img-4 img { width: 187px; }
         #categories .category-row .products
         .product-card { max-width: 163px; }
+        #shop .products .product-card { width: 155px; }
     }
 }
 
@@ -691,6 +730,7 @@ main {
         }
         #categories .category-row .products
         .product-card { min-width: 196px; }
+        #shop .products .product-card { width: 155px; }
     }
 
 }
@@ -735,6 +775,4 @@ main {
             .img-4 img { width: 262px; }
         }
         #categories .category-row .products
-        .product-card { min-width: 191px; }
-    }
-}
+        .product-card { min-width:
