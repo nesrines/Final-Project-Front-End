@@ -515,6 +515,34 @@ main #form .buttons button {
   line-height: 1.6;
   text-transform: uppercase;
 }
+main #product #content > div {
+  padding: 24px 0 22px;
+}
+main #product #content > div:not(:first-child) {
+  border-top: 1px solid #e5e5e5;
+}
+main #product #content .info {
+  font-size: 13px;
+}
+main #product #content .info p {
+  display: inline-block;
+  width: 139px;
+  padding: 0 20px 0 0;
+}
+main #product #content .info span {
+  font-weight: 600;
+}
+main #product #content .price p {
+  color: #e16ca4;
+  font-size: 50px;
+}
+main #product #content .price p.old-price {
+  color: #333333;
+  font-size: 13px;
+}
+main #product #content .price p.old-price span {
+  text-decoration: line-through;
+}
 
 @media only screen and (min-width: 480px) {
   main #categories .category-row .products .product-card {

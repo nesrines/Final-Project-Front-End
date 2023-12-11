@@ -486,7 +486,32 @@ main {
     }
 
     #product {
-        
+        #content{
+            & > div {
+                padding: 24px 0 22px;
+                &:not(:first-child) {
+                    border-top: 1px solid #e5e5e5;
+                }
+            }
+            .info {
+                font-size: 13px;
+                p {
+                    display: inline-block;
+                    width: 139px;
+                    padding: 0 20px 0 0;
+                }
+                span { font-weight: 600;}
+            }
+            .price p {
+                color: #e16ca4;
+                font-size: 50px;
+                &.old-price {
+                    color: #333333;
+                    font-size: 13px;
+                    span { text-decoration: line-through;}
+                }
+            }
+        }
     }
 }
 
@@ -775,4 +800,6 @@ main {
             .img-4 img { width: 262px; }
         }
         #categories .category-row .products
-        .product-card { min-width:
+        .product-card { min-width: 191px; }
+    }
+}
