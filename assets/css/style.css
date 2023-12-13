@@ -11,11 +11,12 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-html a, body a {
-  text-decoration: none;
-}
 html li, body li {
   list-style: none;
+}
+html a, body a {
+  color: #333333;
+  text-decoration: none;
 }
 
 header #top_bar_bg {
@@ -238,7 +239,6 @@ header #header_bottom #navbar a {
   display: inline-block;
   padding: 20px 0 17px;
   margin-right: 23px;
-  color: #333333;
   font-size: 13px;
   line-height: 1;
   vertical-align: bottom;
@@ -312,9 +312,6 @@ main #title ul, main #shop_title ul {
 }
 main #title ul li, main #shop_title ul li {
   font-size: 13px;
-}
-main #title ul a, main #shop_title ul a {
-  color: #333333;
 }
 main #banners .col-md-8 {
   padding: 30px 0 0;
@@ -447,7 +444,6 @@ main .product-card .card-image a img {
 }
 main .product-card .card-content .name a {
   padding: 10px 0 0;
-  color: #333333;
   font-size: 13px;
 }
 main .product-card .card-content .price {
@@ -543,6 +539,147 @@ main #form .buttons button {
   line-height: 1.6;
   text-transform: uppercase;
 }
+main #form .buttons button:hover {
+  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
+}
+main #sidebar {
+  align-self: flex-start;
+  padding: 10px 0;
+  border: 2px solid #b4c212;
+  border-radius: 4px;
+  margin: 40px 15px 0;
+  background-color: #ffffff;
+}
+main #sidebar li {
+  padding: 5px 30px 0;
+  margin: 0;
+}
+main #sidebar li:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+main #sidebar li a {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 13px;
+}
+main #sidebar li a:hover {
+  color: #e16ca4;
+}
+main #wishlist {
+  padding: 40px 55px 20px;
+  margin: 40px 15px 0;
+  background-color: #ffffff;
+}
+main #wishlist table tr th {
+  padding: 18px 30px 14px;
+  font-size: 11px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+main #wishlist table tr td {
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 30px 16px;
+}
+main #wishlist table tr td img {
+  width: 100px;
+}
+main #wishlist table tr td.buttons a {
+  display: inline-block;
+  padding: 11px 0;
+  border-radius: 4px;
+  margin: 5px 0;
+  text-align: center;
+  line-height: 1;
+}
+main #wishlist table tr td.buttons a i {
+  font-size: 12px;
+  color: #ffffff;
+}
+main #wishlist table tr td.buttons a.add-to-basket {
+  width: 64px;
+  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
+}
+main #wishlist table tr td.buttons a.add-to-basket:hover {
+  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main #wishlist table tr td.buttons a.remove-wishlist {
+  width: 40px;
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+}
+main #wishlist table tr td.buttons a.remove-wishlist :hover {
+  background: linear-gardient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main #basket {
+  padding: 0 45px 20px;
+  margin: 40px 0 0;
+  background-color: #ffffff;
+  overflow-x: scroll;
+}
+main #basket table.cart-products {
+  width: 100%;
+}
+main #basket table.cart-products thead {
+  border-bottom: 1px solid #e5e5e5;
+}
+main #basket table.cart-products tr {
+  padding: 0 15px;
+}
+main #basket table.cart-products tr th {
+  padding: 18px 30px 14px;
+  font-size: 11px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+main #basket table.cart-products tr td {
+  padding: 30px 30px 0;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+}
+main #basket table.cart-total {
+  float: right;
+  margin: 25px 0;
+}
+main #basket table.cart-total td {
+  padding-left: 30px;
+  color: #e16ca4;
+  font-size: 14px;
+  text-align: end;
+}
+main #basket table.cart-total td strong {
+  font-size: 13px;
+  color: #333333;
+}
+main #basket .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main #basket .buttons a {
+  display: inline-block;
+  padding: 11px 38px;
+  border-radius: 4px;
+  margin: 10px 0 5px;
+  color: #ffffff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+main #basket .buttons a:first-child {
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+}
+main #basket .buttons a:first-child:hover {
+  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main #basket .buttons a:last-child {
+  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
+}
+main #basket .buttons a:last-child:hover {
+  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
+}
 main #product {
   padding: 25px;
 }
@@ -616,11 +753,21 @@ main #product #content .buttons a i {
   margin-right: 8px;
 }
 main #product #content .buttons a.add-to-wishlist {
-  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
   margin-bottom: 10px;
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
 }
-main #product #content .buttons a.add-to-cart {
+main #product #content .buttons a.add-to-wishlist:hover {
+  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main #product #content .buttons a.add-to-basket {
   background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
+}
+main #product #content .buttons a.add-to-basket:hover {
+  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
+}
+main #product #description h1 {
+  padding: 10px 0;
+  margin: 0 15px;
 }
 
 @media only screen and (min-width: 480px) {
@@ -646,6 +793,9 @@ main #product #content .buttons a.add-to-cart {
   main #banners .col-md-8 img {
     width: 555px;
     margin: 0 auto;
+  }
+  main #basket {
+    overflow-x: auto;
   }
 }
 @media only screen and (min-width: 610px) {
@@ -724,6 +874,9 @@ main #product #content .buttons a.add-to-cart {
   }
   main #title, main #shop_title {
     padding-top: 50px;
+  }
+  main #sidebar, main #wishlist {
+    margin-top: 50px;
   }
   main #contact_form .form-group {
     display: flex;
@@ -838,6 +991,12 @@ main #product #content .buttons a.add-to-cart {
   }
   main {
     padding: 0 45px 50px;
+  }
+  main wishlist {
+    width: calc(75% - 30px);
+  }
+  main #sidebar {
+    width: calc(25% - 30px);
   }
   main #contact_form label {
     white-space: nowrap;

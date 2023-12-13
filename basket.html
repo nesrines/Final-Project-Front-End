@@ -120,48 +120,84 @@
 
     <main>
         <div id="title">
-            <h1>Register</h1>
+            <h1>Basket</h1>
             <div aria-label="breadcrumb">
                 <ul class="breadcrumb d-inline-flex">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="profile.html">Account</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Register</li>
+                    <li class="breadcrumb-item active" aria-current="page">Basket</li>
                 </ul>
             </div>
         </div>
-        <form id="form">
-            <h3>Register</h3>
-            <div class="row m-0 justify-content-between">
-                <div class="form-group col-6 p-0">
-                    <label for="Name" class="col-md-2 nr">Name</label>
-                    <input type="text">
-                </div>
-                <div class="form-group col-6 p-0">
-                    <label for="Surname" class="col-md-2 nr">Surname</label>
-                    <input type="text">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="UserName" class="col-md-2">Username</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label for="Email" class="col-md-2">Email</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label for="Password" class="col-md-2">Password</label>
-                <input type="password">
-            </div>
-            <div class="form-group">
-                <label for="ConfirmPassword" class="col-md-2">Confirm Password</label>
-                <input type="password">
-            </div>
+
+        <div id="basket">
+            <table class="cart-products">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="details.html">
+                                <img src="assets/img/products/grapes.jpg" width="65" alt="Product">
+                            </a>
+                        </td>
+                        <td><a href="details.html">Nokia 3310</a></td>
+                        <td>
+                            <input type="number" min="1" />
+                            <a href="#" class="remove-basket">
+                                <img src="assets/img/icons/remove.png" width="15" alt="remove">
+                            </a>
+                        </td>
+                        <td>$9.99</td>
+                        <td>$39.96</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="details.html">
+                                <img src="assets/img/products/grapes.jpg" width="65" alt="Product">
+                            </a>
+                        </td>
+                        <td><a href="details.html">Nokia 3310</a></td>
+                        <td>
+                            <input type="number" min="1" />
+                            <a href="#" class="remove-basket">
+                                <img src="assets/img/icons/remove.png" width="15" alt="remove">
+                            </a>
+                        </td>
+                        <td>$19.99</td>
+                        <td>$39.98</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="cart-total">
+                <tr>
+                    <td><strong>Sub-total:</strong></td>
+                    <td>$79.94</td>
+                </tr>
+                <tr>
+                    <td><strong>Discount:</strong></td>
+                    <td>$0.00</td>
+                </tr>
+                <tr>
+                    <td><strong>Total:</strong></td>
+                    <td>$79.94</td>
+                </tr>
+            </table>
+
             <div class="buttons">
-                <button type="submit">Sign Up</button>
+                <a href="shop.html">Continue Shopping</a>
+                <a href="checkout.html">Checkout</a>
             </div>
-        </form>
+        </div>
     </main>
+
     
     <footer>
         <div id="footer_top">
