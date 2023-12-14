@@ -120,73 +120,41 @@
 
     <main>
         <div id="title">
-            <h1>Wishlist</h1>
+            <h1>Order History</h1>
             <div aria-label="breadcrumb">
                 <ul class="breadcrumb d-inline-flex">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="profile.html">Account</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+                    <li class="breadcrumb-item active" aria-current="page">Order History</li>
                 </ul>
             </div>
         </div>
-
+        
         <section class="d-lg-flex">
-            <div id="wishlist">
-                <div class="table-container">
-                    <table>
-                        <thead>
-                          <tr>
-                            <th>Image</th>
-                            <th>Product Name</th>
-                            <th>Stock</th>
-                            <th>Unit Price</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="details.html">
-                                        <img src="assets/img/products/grapes.jpg" alt="Product">
-                                    </a>
-                              </td>
-                                <td><a href="details.html">Product Title</a></td>
-                                <td>In Stock</td>
-                                <td>$242.00 <span>$276.00</span></td>
-                                <td class="buttons">
-                                    <a href="#" class="add-to-basket"><i class="fa fa-shopping-cart"></i></a>
-                                    <a href="#" class="remove-wishlist"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="details.html">
-                                        <img src="assets/img/products/grapes.jpg" alt="Product">
-                                    </a>
-                              </td>
-                                <td><a href="details.html">Product Title</a></td>
-                                <td class="text-danger">Stock Out</td>
-                                <td>$242.00</td>
-                                <td class="buttons">
-                                    <a href="#" class="remove-wishlist"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div id="orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            
-            <ul id="sidebar">
+
+            <ul id="sidebar" class="col-lg-3">
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="wishlist.html">Wishlist</a></li>
                 <li><a href="address.html">Address Book</a></li>
                 <li><a href="orders.html">Order History</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
-        </section>        
+        </section>
     </main>
 
-    
     <footer>
         <div id="footer_top">
             <div class="row">
@@ -209,7 +177,7 @@
                     </div>
                 </a>
                 <a href="https://www.google.com/maps/search/code+academy/@40.3772138,49.8436158,15z/data=!3m1!4b1?entry=ttu"
-                   class="footer-block col-md-4">
+                class="footer-block col-md-4">
                     <div class="img d-inline-block">
                         <img src="assets/img/icons/icon-address.png" alt="Address">
                     </div>
@@ -219,8 +187,8 @@
                     </div>
                 </a>
             </div>
-       </div>
-       <div id="footer_bottom" class="text-center">
+    </div>
+    <div id="footer_bottom" class="text-center">
             Created By NasrinEs. Fastor Grocery © 2023
             <ul class="d-flex justify-content-center">
                 <li><a href="https://github.com/nesrines"><i class="fa-brands fa-github"></i></a></li>
@@ -228,8 +196,8 @@
                 <li><a href="https://stackoverflow.com/users/23034318/nasrin-asadli"><i class="fa-brands fa-stack-overflow"></i></a></li>
                 <li><a href="https://www.tiktok.com/@nasrin.es"><i class="fa-brands fa-tiktok"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UCiQmeT5tUwmMIvmpbBE6yww"><i class="fa-brands fa-youtube"></i></a></li>
-           </ul>      
-       </div>
+        </ul>      
+    </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

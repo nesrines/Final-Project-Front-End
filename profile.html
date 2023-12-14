@@ -130,13 +130,55 @@
             </div>
         </div>
         
-        <ul id="sidebar" class="col-lg-3">
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="#">Address Book</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="#">Order History</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
+        <section class="d-lg-flex">
+            <div id="profile">
+                <form id="form">
+                    <div class="row m-0 justify-content-between">
+                        <div class="form-group col-6 p-0">
+                            <label for="Name" class="col-md-2 nr">Name</label>
+                            <input type="text" value="Nasrin">
+                        </div>
+                        <div class="form-group col-6 p-0">
+                            <label for="Surname" class="col-md-2 nr">Surname</label>
+                            <input type="text" value="Asadli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="UserName" class="col-md-2">Username</label>
+                        <input type="text" value="nasrines">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="col-md-2">Email</label>
+                        <input type="text" value="nasrinfa@code.edu.az">
+                    </div>
+                    <div class="divider"></div>
+                    <h3>Password Change</h3>
+                    <div class="form-group">
+                        <label for="OldPassword" class="col-md-2 nr">Old Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="NewPassword" class="col-md-2 nr">New Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmPassword" class="col-md-2 nr">Confirm Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+
+            <ul id="sidebar" class="col-lg-3">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="address.html">Address Book</a></li>
+                <li><a href="orders.html">Order History</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </section>
     </main>
     
     <footer>

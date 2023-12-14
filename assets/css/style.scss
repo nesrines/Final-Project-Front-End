@@ -220,7 +220,7 @@ header {
             }
         }
         #navbar {
-            overflow-x: scroll;
+            overflow-x: auto;
             white-space: nowrap;
             a {
                 display: inline-block;
@@ -342,7 +342,7 @@ main {
                 display: flex;
                 height: 306px;
                 padding-left: 5px;
-                overflow-x: scroll;
+                overflow-x: auto;
                 border: 1px solid #e5e5e5;
                 border-style: solid none solid none;
                 &::-webkit-scrollbar { height: 5px;}
@@ -513,6 +513,12 @@ main {
                 }
             }
         }
+        .divider {
+            width: calc(100% + 30px);
+            height: 1px;
+            background-color: #e5e5e5;
+            margin: 50px 0 50px -15px;
+        }
     }
 
     #sidebar {
@@ -537,63 +543,97 @@ main {
         }
     }
 
-    #wishlist {
-        padding: 40px 55px 20px;
+    #wishlist, #profile, #orders, #addresses {
+        padding: 40px 0 20px;
         margin: 40px 15px 0;
         background-color: #ffffff;
-        table tr {
-            th {
-                padding: 18px 30px 14px;
-                font-size: 11px;
-                text-align: center;
-                vertical-align: middle;
-                text-transform: uppercase;
-            }
-            td {
-                font-size: 13px;
-                text-align: center;
-                vertical-align: middle;
-                padding: 20px 30px 16px;
-                img { width: 100px; }
-                &.buttons {
-                    a {
-                        display: inline-block;
-                        padding: 11px 0;
-                        border-radius: 4px;
-                        margin: 5px 0;
-                        text-align: center;
-                        line-height: 1;
-                        i {
-                            font-size: 12px;
-                            color: #ffffff;
-                        }
-                        &.add-to-basket {
-                            width: 64px;
-                            background: linear-gradient(to bottom,#d6528b 0%, #e989b8 0%, #d6528b 99%);
-                            &:hover {
+    }
+
+    #wishlist {
+        .table-container {
+            overflow-x: auto;
+            table tr {
+                &:hover {
+                    td, th {
+                        background-color: #fafafa;
+                    }
+                }
+                th, td {
+                    border: 1px solid #e5e5e5;
+                    border-collapse: collapse;
+                }
+                th {
+                    padding: 18px 30px 14px;
+                    font-size: 11px;
+                    text-align: center;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                }
+                td {
+                    font-size: 13px;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 20px 30px 16px;
+                    img { width: 100px; }
+                    span {
+                        font-size: 11px;
+                        text-decoration: line-through;
+                    }
+                    &.buttons {
+                        a {
+                            display: inline-block;
+                            padding: 11px 0;
+                            border-radius: 4px;
+                            margin: 5px 0;
+                            text-align: center;
+                            line-height: 1;
+                            i {
+                                font-size: 12px;
+                                color: #ffffff;
+                            }
+                            &.add-to-basket {
+                                width: 64px;
+                                background: linear-gradient(to bottom,#d6528b 0%, #e989b8 0%, #d6528b 99%);
+                                &:hover {
                                     background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
                                 }
-                        }
-                        &.remove-wishlist {
-                            width: 40px;
-                            background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
-                            :hover {
-                                background: linear-gardient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+                            }
+                            &.remove-wishlist {
+                                width: 40px;
+                                background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+                                :hover {
+                                    background: linear-gardient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+                                }
                             }
                         }
                     }
-                }
+                } 
             }
         }
     }
 
+    #profile #form {
+        padding: 0;
+        margin: 0;
+        .form-group { margin: 0 0 15px; }
+        .row .form-group {
+            &:first-child { width: calc(50% - 15px); }
+            &:last-child { width: calc(50% - 15px); }
+        }
+    }
+
+    #orders {
+        
+    }
+
     #basket {
-        padding: 0 45px 20px;
+        padding: 0 15px 20px;
         margin: 40px 0 0;
         background-color: #ffffff;
-        overflow-x: scroll;
-        table {
-            &.cart-products {
+        .cart-products {
+            width: 100%;
+            overflow-x: auto;
+            table {
                 width: 100%;
                 thead { border-bottom: 1px solid #e5e5e5; }
                 tr {
@@ -610,10 +650,32 @@ main {
                         font-size: 13px;
                         text-align: center;
                         vertical-align: middle;
+                        input {
+                            width: 61px;
+                            padding: 12px 0 11px;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 4px;
+                            outline: none;
+                            margin-right: 10px;
+                            text-align: center;
+                            &:focus {
+                                border-color: #e16ca4;
+                            }
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                            }
+                        }
+                        span {
+                            margin-left: 10px;
+                            font-size: 11px;
+                            text-decoration: line-through;
+                        }
                     }
                 }
             }
-            &.cart-total {
+        }
+        .cart-total {
                 float: right;
                 margin: 25px 0;
                 td {
@@ -626,11 +688,11 @@ main {
                         color: #333333;
                     }
                 }
-            }
         }
         .buttons {
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             a {
                 display: inline-block;
@@ -767,14 +829,10 @@ main {
 @media only screen and (min-width: 595px) {
     header #header_bottom #navbar {
         justify-content: space-around;
-        overflow-x: hidden;
     }
-    main {
-        #banners .col-md-8 img {
-            width: 555px;
-            margin: 0 auto;
-        }
-        #basket { overflow-x: auto; }
+    main #banners .col-md-8 img {
+        width: 555px;
+        margin: 0 auto;
     }
 }
 
@@ -846,7 +904,6 @@ main {
     footer #footer_top .row .footer-block { display: block; }
     main {
         #title, #shop_title { padding-top: 50px; }
-        #sidebar, #wishlist { margin-top: 50px; }
         #contact_form .form-group {
             display: flex;
             label {
@@ -887,6 +944,9 @@ main {
             padding: 50px 25px;
             .card-image a img { width: 155px; }
         }
+        #basket { padding: 0 45px 20px; }
+        #sidebar, #wishlist, #profile, #orders,
+        #addresses { margin-top: 50px; }
     }
 }
 
@@ -951,8 +1011,6 @@ main {
     }
     main {
         padding: 0 45px 50px;
-        wishlist { width: calc(75% - 30px); }
-        #sidebar { width: calc(25% - 30px); }
         #contact_form label { white-space: nowrap; }
         #shop_title, #shop { padding-left: 216px; }
         #banners {
@@ -964,6 +1022,12 @@ main {
         #categories .category-row .products
         .product-card { max-width: 163px; }
         #shop .products .product-card { width: 155px; }
+
+        #wishlist, #profile, #order, #addresses {
+            width: calc(75% - 30px);
+            padding: 40px 20px 20px;
+        }
+        #sidebar { width: calc(25% - 30px); }
     }
 }
 
@@ -994,17 +1058,17 @@ main {
         #categories .category-row .products
         .product-card { min-width: 196px; }
         #shop .products .product-card { width: 179px; }
+        #wishlist, #profile, #orders, #addresses {
+            padding: 40px 40px 20px;
+        }
     }
 
 }
 
 @media only screen and (min-width: 1200px) {
-    main #categories .category-row .products {
-        overflow-x: hidden;
-        .product-card {
-            min-width: 157px;
-            max-width: 157px;
-        }
+    main #categories .category-row .products .product-card {
+        min-width: 157px;
+        max-width: 157px;
     }
 }
 
@@ -1040,5 +1104,8 @@ main {
         #categories .category-row .products
         .product-card { min-width: 191px; }
         #shop .products .product-card { width: 212px; }
+        #wishlist, #profile, #orders, #addresses { 
+            padding: 40px 55px 20px;
+        }
     }
 }
