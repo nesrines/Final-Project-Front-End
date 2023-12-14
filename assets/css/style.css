@@ -125,7 +125,7 @@ header #header_top #header_right #my_account:hover i {
   color: #ffffff;
 }
 header #header_top #header_right #cart_block {
-  width: 117.4px;
+  min-width: 117.4px;
   margin-left: 28px;
 }
 header #header_top #header_right #cart_block #cart_heading {
@@ -297,6 +297,42 @@ footer #footer_bottom ul li a i {
 
 main {
   padding: 0 20px 35px;
+}
+main h2 {
+  padding: 10px 0 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+main .buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .buttons a, main .buttons button {
+  display: inline-block;
+  padding: 11px 38px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0 5px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .buttons a:first-child, main .buttons button:first-child {
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+}
+main .buttons a:first-child:hover, main .buttons button:first-child:hover {
+  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main .buttons a:last-child, main .buttons button:last-child {
+  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
+}
+main .buttons a:last-child:hover, main .buttons button:last-child:hover {
+  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
 }
 main #title, main #shop_title {
   padding-top: 40px;
@@ -484,6 +520,90 @@ main .product-card .only-hover li a:hover {
 main .product-card .only-hover li a:hover i {
   color: #ffffff;
 }
+main #product {
+  padding: 25px;
+}
+main #product #images .zoom {
+  position: relative;
+  width: 100%;
+  padding: 1px;
+  border: 1px solid #e5e5e5;
+  margin: 40px 0 0;
+  overflow: hidden;
+}
+main #product #images .zoom img {
+  width: 100%;
+  transition: none;
+}
+main #product #images .slider {
+  display: flex;
+  padding: 20px 19px 0;
+  overflow-x: scroll;
+}
+main #product #images .slider::-webkit-scrollbar {
+  height: 0;
+}
+main #product #images .slider img {
+  width: 41px;
+  margin: 0 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+main #product #content > div {
+  padding: 24px 0 22px;
+}
+main #product #content > div:not(:first-child) {
+  border-top: 1px solid #e5e5e5;
+}
+main #product #content .info {
+  font-size: 13px;
+}
+main #product #content .info p {
+  display: inline-block;
+  width: 139px;
+  padding: 0 20px 0 0;
+  margin: 0;
+}
+main #product #content .info span {
+  font-weight: 600;
+}
+main #product #content .price p {
+  margin: 0;
+  color: #e16ca4;
+  font-size: 50px;
+  line-height: 1;
+}
+main #product #content .price p.old-price {
+  padding-left: 15px;
+  color: #cccccc;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+main #product #content .buttons a {
+  display: block;
+  padding: 16px;
+}
+main #product #content .buttons a i {
+  color: #ffffff;
+  margin-right: 8px;
+}
+main #product #content .buttons a.add-to-wishlist {
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+}
+main #product #content .buttons a.add-to-wishlist:hover {
+  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+}
+main #product #content .buttons a.add-to-basket {
+  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
+}
+main #product #content .buttons a.add-to-basket:hover {
+  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
+}
+main #product #description h1 {
+  padding: 10px 0;
+  margin: 0 15px;
+}
 main #form {
   background-color: #ffffff;
   padding: 40px 55px 20px;
@@ -527,21 +647,6 @@ main #form .buttons {
   margin: 0 0 15px;
   text-align: end;
 }
-main #form .buttons button {
-  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
-  color: #ffffff;
-  padding: 11px 38px;
-  border: none;
-  border-radius: 4px;
-  margin: 10px 0 5px;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.6;
-  text-transform: uppercase;
-}
-main #form .buttons button:hover {
-  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
-}
 main #form .divider {
   width: calc(100% + 30px);
   height: 1px;
@@ -571,66 +676,70 @@ main #sidebar li a {
 main #sidebar li a:hover {
   color: #e16ca4;
 }
-main #wishlist, main #profile, main #orders, main #addresses {
+main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
   padding: 40px 0 20px;
   margin: 40px 15px 0;
   background-color: #ffffff;
 }
-main #wishlist .table-container {
+main #wishlist .table-container, main #orders .table-container, main #checkout .table-container {
+  margin-bottom: 30px;
   overflow-x: auto;
 }
-main #wishlist .table-container table tr:hover td, main #wishlist .table-container table tr:hover th {
+main #wishlist .table-container table, main #orders .table-container table, main #checkout .table-container table {
+  width: 100%;
+}
+main #wishlist .table-container table tr:not(.details):hover td, main #wishlist .table-container table tr:not(.details):hover th, main #orders .table-container table tr:not(.details):hover td, main #orders .table-container table tr:not(.details):hover th, main #checkout .table-container table tr:not(.details):hover td, main #checkout .table-container table tr:not(.details):hover th {
   background-color: #fafafa;
 }
-main #wishlist .table-container table tr th, main #wishlist .table-container table tr td {
+main #wishlist .table-container table tr th, main #wishlist .table-container table tr td, main #orders .table-container table tr th, main #orders .table-container table tr td, main #checkout .table-container table tr th, main #checkout .table-container table tr td {
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
 }
-main #wishlist .table-container table tr th {
+main #wishlist .table-container table tr th, main #orders .table-container table tr th, main #checkout .table-container table tr th {
   padding: 18px 30px 14px;
   font-size: 11px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
 }
-main #wishlist .table-container table tr td {
+main #wishlist .table-container table tr td, main #orders .table-container table tr td, main #checkout .table-container table tr td {
   font-size: 13px;
   text-align: center;
   vertical-align: middle;
   padding: 20px 30px 16px;
 }
-main #wishlist .table-container table tr td img {
+main #wishlist .table-container table tr td img, main #orders .table-container table tr td img, main #checkout .table-container table tr td img {
   width: 100px;
 }
-main #wishlist .table-container table tr td span {
+main #wishlist .table-container table tr td span, main #orders .table-container table tr td span, main #checkout .table-container table tr td span {
   font-size: 11px;
   text-decoration: line-through;
 }
-main #wishlist .table-container table tr td.buttons a {
-  display: inline-block;
-  padding: 11px 0;
-  border-radius: 4px;
+main #wishlist .table-container table tr td.buttons, main #orders .table-container table tr td.buttons, main #checkout .table-container table tr td.buttons {
+  display: table-cell;
+}
+main #wishlist .table-container table tr td.buttons a, main #orders .table-container table tr td.buttons a, main #checkout .table-container table tr td.buttons a {
   margin: 5px 0;
-  text-align: center;
   line-height: 1;
 }
-main #wishlist .table-container table tr td.buttons a i {
+main #wishlist .table-container table tr td.buttons a i, main #orders .table-container table tr td.buttons a i, main #checkout .table-container table tr td.buttons a i {
   font-size: 12px;
   color: #ffffff;
 }
-main #wishlist .table-container table tr td.buttons a.add-to-basket {
+main #wishlist .table-container table tr td.buttons a.add-to-basket, main #orders .table-container table tr td.buttons a.add-to-basket, main #checkout .table-container table tr td.buttons a.add-to-basket {
   width: 64px;
-  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
 }
-main #wishlist .table-container table tr td.buttons a.add-to-basket:hover {
-  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
-}
-main #wishlist .table-container table tr td.buttons a.remove-wishlist {
+main #wishlist .table-container table tr td.buttons a.remove-wishlist, main #orders .table-container table tr td.buttons a.remove-wishlist, main #checkout .table-container table tr td.buttons a.remove-wishlist {
   width: 40px;
-  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
 }
-main #wishlist .table-container table tr td.buttons a.remove-wishlist :hover {
-  background: linear-gardient(to bottom, #323232 0%, #535353 0%, #323232 99%);
+main #wishlist .table-container table tr td table, main #orders .table-container table tr td table, main #checkout .table-container table tr td table {
+  width: 100%;
+}
+main #wishlist .table-container table tr td table thead, main #orders .table-container table tr td table thead, main #checkout .table-container table tr td table thead {
+  background-color: #f1f1f1;
+}
+main #wishlist .table-container table tr td table td, main #orders .table-container table tr td table td, main #checkout .table-container table tr td table td {
+  padding: 15px 0 10px;
 }
 main #profile #form {
   padding: 0;
@@ -644,6 +753,26 @@ main #profile #form .row .form-group:first-child {
 }
 main #profile #form .row .form-group:last-child {
   width: calc(50% - 15px);
+}
+main #addresses table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+main #addresses table td {
+  border: 1px solid #e5e5e5;
+  padding: 20px 30px 16px;
+  font-size: 13px;
+  text-align: center;
+}
+main #addresses table td.text-start {
+  width: 54%;
+}
+main #addresses table td span {
+  float: right;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
+  color: #ffffff;
 }
 main #basket {
   padding: 0 15px 20px;
@@ -710,121 +839,8 @@ main #basket .cart-total td strong {
   font-size: 13px;
   color: #333333;
 }
-main #basket .buttons {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-main #basket .buttons a {
-  display: inline-block;
-  padding: 11px 38px;
-  border-radius: 4px;
-  margin: 10px 0 5px;
-  color: #ffffff;
-  font-size: 11px;
-  text-transform: uppercase;
-}
-main #basket .buttons a:first-child {
-  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
-}
-main #basket .buttons a:first-child:hover {
-  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
-}
-main #basket .buttons a:last-child {
-  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
-}
-main #basket .buttons a:last-child:hover {
-  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
-}
-main #product {
-  padding: 25px;
-}
-main #product #images .zoom {
-  position: relative;
-  width: 100%;
-  padding: 1px;
-  border: 1px solid #e5e5e5;
-  margin: 40px 0 0;
-  overflow: hidden;
-}
-main #product #images .zoom img {
-  width: 100%;
-  transition: none;
-}
-main #product #images .slider {
-  display: flex;
-  padding: 20px 19px 0;
-  overflow-x: scroll;
-}
-main #product #images .slider::-webkit-scrollbar {
-  height: 0;
-}
-main #product #images .slider img {
-  width: 41px;
-  margin: 0 10px;
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
-}
-main #product #content > div {
-  padding: 24px 0 22px;
-}
-main #product #content > div:not(:first-child) {
-  border-top: 1px solid #e5e5e5;
-}
-main #product #content .info {
-  font-size: 13px;
-}
-main #product #content .info p {
-  display: inline-block;
-  width: 139px;
-  padding: 0 20px 0 0;
-  margin: 0;
-}
-main #product #content .info span {
-  font-weight: 600;
-}
-main #product #content .price p {
-  margin: 0;
-  color: #e16ca4;
-  font-size: 50px;
-  line-height: 1;
-}
-main #product #content .price p.old-price {
-  padding-left: 15px;
-  color: #cccccc;
-  font-size: 20px;
-  text-decoration: line-through;
-}
-main #product #content .buttons a {
-  display: block;
-  padding: 16px;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 13px;
-  text-align: center;
-  text-transform: uppercase;
-}
-main #product #content .buttons a i {
-  color: #ffffff;
-  margin-right: 8px;
-}
-main #product #content .buttons a.add-to-wishlist {
-  margin-bottom: 10px;
-  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
-}
-main #product #content .buttons a.add-to-wishlist:hover {
-  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
-}
-main #product #content .buttons a.add-to-basket {
-  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
-}
-main #product #content .buttons a.add-to-basket:hover {
-  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
-}
-main #product #description h1 {
-  padding: 10px 0;
-  margin: 0 15px;
+main #checkout .buttons {
+  justify-content: end;
 }
 
 @media only screen and (min-width: 480px) {
@@ -982,7 +998,7 @@ main #product #description h1 {
     padding: 0 45px 20px;
   }
   main #sidebar, main #wishlist, main #profile, main #orders,
-  main #addresses {
+  main #addresses, main #checkout, main #order_address {
     margin-top: 50px;
   }
 }
@@ -1073,11 +1089,11 @@ main #product #description h1 {
   main #shop .products .product-card {
     width: 155px;
   }
-  main #wishlist, main #profile, main #order, main #addresses {
+  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
     width: calc(75% - 30px);
     padding: 40px 20px 20px;
   }
-  main #sidebar {
+  main #sidebar, main #order_address {
     width: calc(25% - 30px);
   }
 }
@@ -1119,7 +1135,7 @@ main #product #description h1 {
   main #shop .products .product-card {
     width: 179px;
   }
-  main #wishlist, main #profile, main #orders, main #addresses {
+  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
     padding: 40px 40px 20px;
   }
 }
@@ -1176,7 +1192,7 @@ main #product #description h1 {
   main #shop .products .product-card {
     width: 212px;
   }
-  main #wishlist, main #profile, main #orders, main #addresses {
+  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
     padding: 40px 55px 20px;
   }
 }/*# sourceMappingURL=style.css.map */

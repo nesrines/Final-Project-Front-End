@@ -5,6 +5,7 @@ $(document).ready(function() {
         $('#cat_list').removeClass('hide');
     }
 
+    //Product Details Page => Image Zoom
     $('.zoom').mousemove(function(e) {
     const width = $(this).width();
     const height = $(this).height();
@@ -24,5 +25,10 @@ $(document).ready(function() {
     $('.zoom').mouseleave(function() {
       $('.zoom img').css({'transform': 'scale(1)'});
     });
- 
+
+    //Order History Page => Table Collapse
+    $('.order').click(function() {
+        $(this).parent().find('.details').addClass('d-none');
+        $(this).next().toggleClass('d-none');
+    })
 });

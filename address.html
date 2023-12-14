@@ -62,7 +62,7 @@
                         <input id="search_input" placeholder="Search">
                     </div>
                 </div>
-                <a href="#profile.html" id="my_account" class="d-inline-block px"><i class="fa fa-user"></i></a>
+                <a href="profile.html" id="my_account" class="d-inline-block px"><i class="fa fa-user"></i></a>
                 <a href="basket.html" id="cart_block" class="d-inline-block text-center">
 	                <div id="cart_heading" class="d-flex">
 		                <span id="cart_count">0</span>
@@ -120,57 +120,66 @@
 
     <main>
         <div id="title">
-            <h1>Product Title</h1>
+            <h1>Address Book</h1>
             <div aria-label="breadcrumb">
                 <ul class="breadcrumb d-inline-flex">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+                    <li class="breadcrumb-item"><a href="profile.html">Account</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Address Book</li>
                 </ul>
             </div>
         </div>
-        <section id="product" class="row">
-            <div id="images" class="col-md-7">
-                <div class="zoom">
-                    <img src="assets/img/products/grapes.jpg" alt="Zoom Image">
-                </div>
-                <div class="slider">
-                    <img src="assets/img/products/eggplant.jpg" alt="image">
-                    <img src="assets/img/products/eggplant.jpg" alt="image">
-                    <img src="assets/img/products/eggplant.jpg" alt="image">
-                    <img src="assets/img/products/eggplant.jpg" alt="image">
-                    <img src="assets/img/products/eggplant.jpg" alt="image">
+        
+        <section class="d-lg-flex">
+            <div id="addresses">
+                <h2>Address Book Entries</h2>
+                <table>
+                    <tr>
+                        <td class="text-start">
+                            <span>Default</span>
+                            Sharifzada<br>
+                            Yasamal<br>
+                            Baku City<br>
+                            Baku
+                        </td>
+                        <td>
+                            <div class="buttons">
+                                <a href="#">Edit</a>
+                                <a href="#">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-start">
+                            Nizami<br>
+                            Nasimi<br>
+                            Baku City<br>
+                            Baku
+                        </td>
+                        <td>
+                            <div class="buttons">
+                                <a href="#">Edit</a>
+                                <a href="#">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="buttons float-end">
+                    <a href="profile.html">Back</a>
+                    <a href="#">New Address</a>
                 </div>
             </div>
 
-            <div id="content" class="col-md-5">
-                <div class="info">
-                    <div><p>Brand:</p> <span>none</span></div>
-                    <div><p>Product Code:</p> <span>Product Id</span></div>
-                    <div><p>Availability:</p> <span>Stock Out</span></div>
-                </div>
-                <div class="price">
-                    <p>$122.00</p>
-                    <p class="old-price">$134.99</p>
-                </div>
-                <div class="buttons">
-                    <a href="#" class="add-to-wishlist"><i class="fa fa-heart"></i>  Add to Wishlist</a>
-                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i>  Add to Cart</a>
-                </div>
-            </div>
-
-            <div id="description">
-                <h3>Description</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </div>
+            <ul id="sidebar" class="col-lg-3">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="address.html">Address Book</a></li>
+                <li><a href="orders.html">Order History</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
         </section>
     </main>
-    
+
     <footer>
         <div id="footer_top">
             <div class="row">
@@ -193,7 +202,7 @@
                     </div>
                 </a>
                 <a href="https://www.google.com/maps/search/code+academy/@40.3772138,49.8436158,15z/data=!3m1!4b1?entry=ttu"
-                   class="footer-block col-md-4">
+                class="footer-block col-md-4">
                     <div class="img d-inline-block">
                         <img src="assets/img/icons/icon-address.png" alt="Address">
                     </div>
@@ -203,17 +212,17 @@
                     </div>
                 </a>
             </div>
-       </div>
-       <div id="footer_bottom" class="text-center">
-            Created By NasrinEs. Fastor Grocery © 2023
-            <ul class="d-flex justify-content-center">
-                <li><a href="https://github.com/nesrines"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://az.linkedin.com/in/nasrin-asadli-a19a6528a"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://stackoverflow.com/users/23034318/nasrin-asadli"><i class="fa-brands fa-stack-overflow"></i></a></li>
-                <li><a href="https://www.tiktok.com/@nasrin.es"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCiQmeT5tUwmMIvmpbBE6yww"><i class="fa-brands fa-youtube"></i></a></li>
-           </ul>      
-       </div>
+        </div>
+        <div id="footer_bottom" class="text-center">
+                Created By NasrinEs. Fastor Grocery © 2023
+                <ul class="d-flex justify-content-center">
+                    <li><a href="https://github.com/nesrines"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://az.linkedin.com/in/nasrin-asadli-a19a6528a"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://stackoverflow.com/users/23034318/nasrin-asadli"><i class="fa-brands fa-stack-overflow"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@nasrin.es"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCiQmeT5tUwmMIvmpbBE6yww"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>      
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
