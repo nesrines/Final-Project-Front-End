@@ -300,6 +300,7 @@ main {
 }
 main h2 {
   padding: 10px 0 15px;
+  margin: 0;
   font-size: 20px;
   font-weight: 700;
 }
@@ -398,10 +399,10 @@ main #categories .category-row .products::-webkit-scrollbar {
 }
 main #categories .category-row .products::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #d6df3c;
+  background: rgba(214, 223, 60, 0.6666666667);
 }
 main #categories .category-row .products::-webkit-scrollbar-thumb:hover {
-  background: #b4c313;
+  background: #d6df3c;
 }
 main #categories .category-row .products .product-card {
   min-width: calc(100vw - 220px);
@@ -523,31 +524,62 @@ main .product-card .only-hover li a:hover i {
 main #product {
   padding: 25px;
 }
+main #product > div {
+  margin: 40px 0 0;
+}
 main #product #images .zoom {
   position: relative;
   width: 100%;
   padding: 1px;
   border: 1px solid #e5e5e5;
-  margin: 40px 0 0;
   overflow: hidden;
 }
 main #product #images .zoom img {
   width: 100%;
   transition: none;
 }
-main #product #images .slider {
-  display: flex;
+main #product #images .slider-container {
+  position: relative;
   padding: 20px 19px 0;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
-main #product #images .slider::-webkit-scrollbar {
+main #product #images .slider-container > div:not(:last-child) {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 8px 0 0 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  margin-top: 10px;
+  background-color: #ffffff;
+  font-size: 11px;
+}
+main #product #images .slider-container > div:not(:last-child).scroll-left {
+  left: 0;
+}
+main #product #images .slider-container > div:not(:last-child).scroll-right {
+  right: 0;
+}
+main #product #images .slider-container .slider {
+  display: flex;
+  overflow-x: auto;
+}
+main #product #images .slider-container .slider::-webkit-scrollbar {
   height: 0;
 }
-main #product #images .slider img {
-  width: 41px;
-  margin: 0 10px;
+main #product #images .slider-container .slider img {
+  width: calc((100% - 60px) / 4);
   border: 1px solid #e5e5e5;
   border-radius: 4px;
+  margin: 0 10px;
+}
+main #product #images .slider-container .slider img:first-child {
+  margin-left: 0;
+}
+main #product #images .slider-container .slider img:last-child {
+  margin-right: 0;
 }
 main #product #content > div {
   padding: 24px 0 22px;
@@ -579,30 +611,17 @@ main #product #content .price p.old-price {
   font-size: 20px;
   text-decoration: line-through;
 }
+main #product #content .description p {
+  margin: 0;
+  font-size: 13px;
+}
 main #product #content .buttons a {
-  display: block;
+  width: 100%;
   padding: 16px;
 }
 main #product #content .buttons a i {
   color: #ffffff;
   margin-right: 8px;
-}
-main #product #content .buttons a.add-to-wishlist {
-  margin-bottom: 10px;
-  background: linear-gradient(to bottom, #202020 0%, #535353 0%, #202020 99%);
-}
-main #product #content .buttons a.add-to-wishlist:hover {
-  background: linear-gradient(to bottom, #323232 0%, #535353 0%, #323232 99%);
-}
-main #product #content .buttons a.add-to-basket {
-  background: linear-gradient(to bottom, #d6528b 0%, #e989b8 0%, #d6528b 99%);
-}
-main #product #content .buttons a.add-to-basket:hover {
-  background: linear-gradient(to bottom, #e26ea5 0%, #e989b8 0%, #e26ea5 99%);
-}
-main #product #description h1 {
-  padding: 10px 0;
-  margin: 0 15px;
 }
 main #form {
   background-color: #ffffff;
@@ -839,7 +858,32 @@ main #basket .cart-total td strong {
   font-size: 13px;
   color: #333333;
 }
-main #checkout .buttons {
+main #order_address {
+  margin: 40px 15px 0;
+  background-color: #ffffff;
+}
+main #order_address select {
+  width: 100%;
+  font-size: 13px;
+  padding: 12px 20px 11px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main #order_address table {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 13px;
+  text-align: end;
+}
+main #order_address table td {
+  padding: 10px 30px 5px;
+}
+main #order_address .buttons {
   justify-content: end;
 }
 
@@ -856,6 +900,9 @@ main #checkout .buttons {
   }
   main #shop .products .product-card:last-child {
     border-right: none;
+  }
+  main #product #images .slider-container .slider img {
+    width: calc((100% - 80px) / 5);
   }
 }
 @media only screen and (min-width: 595px) {
@@ -994,6 +1041,9 @@ main #checkout .buttons {
   main #shop .products .product-card .card-image a img {
     width: 155px;
   }
+  main #product #images .slider-container .slider img {
+    width: calc((100% - 40px) / 3);
+  }
   main #basket {
     padding: 0 45px 20px;
   }
@@ -1089,12 +1139,19 @@ main #checkout .buttons {
   main #shop .products .product-card {
     width: 155px;
   }
-  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
+  main #wishlist, main #profile, main #orders, main #addresses,
+  main #checkout, main #order_address {
     width: calc(75% - 30px);
     padding: 40px 20px 20px;
   }
-  main #sidebar, main #order_address {
-    width: calc(25% - 30px);
+  main #checkout {
+    width: calc(70% - 30px);
+  }
+  main #sidebar {
+    width: calc(30% - 30px);
+  }
+  main #order_address {
+    width: calc(40% - 30px);
   }
 }
 @media only screen and (min-width: 1098px) {
@@ -1135,7 +1192,8 @@ main #checkout .buttons {
   main #shop .products .product-card {
     width: 179px;
   }
-  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
+  main #wishlist, main #profile, main #orders, main #addresses,
+  main #checkout, main #order_address {
     padding: 40px 40px 20px;
   }
 }
@@ -1143,6 +1201,9 @@ main #checkout .buttons {
   main #categories .category-row .products .product-card {
     min-width: 157px;
     max-width: 157px;
+  }
+  main #product #images .slider-container .slider img {
+    width: calc((100% - 60px) / 4);
   }
 }
 @media only screen and (min-width: 1270px) {
@@ -1192,7 +1253,8 @@ main #checkout .buttons {
   main #shop .products .product-card {
     width: 212px;
   }
-  main #wishlist, main #profile, main #orders, main #addresses, main #checkout {
+  main #wishlist, main #profile, main #orders, main #addresses,
+  main #checkout, main #order_ad {
     padding: 40px 55px 20px;
   }
 }/*# sourceMappingURL=style.css.map */

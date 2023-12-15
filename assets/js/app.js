@@ -26,6 +26,23 @@ $(document).ready(function() {
       $('.zoom img').css({'transform': 'scale(1)'});
     });
 
+    //Product Details Page => Image Slider
+    $('.slider').on('scroll', function(e) {
+        e.preventDefault();
+    })
+
+    $('.scroll-left').on('click', function() {
+        $('.slider').animate({ scrollLeft: '-=100' }, 500);
+    });
+
+    $('.scroll-right').on('click', function() {
+        $('.slider').animate({ scrollLeft: '+=100' }, 500);
+    });
+
+    $('.slider img').on('click', function() {
+        $('.zoom img').attr('src', $(this).attr('src'));
+    })
+
     //Order History Page => Table Collapse
     $('.order').click(function() {
         $(this).parent().find('.details').addClass('d-none');
